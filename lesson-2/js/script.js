@@ -85,3 +85,71 @@ if(g){
 }else{
     console.log('no x');
 }
+
+
+//Числа
+const num1 = 10;
+const num2 = '15';
+const num3 = num1 + Number(num2);
+
+const fNum1 = '21.23Hello';
+
+console.log(num1 + +num2);
+
+const strNum = '23hello54';
+
+console.log(Number(strNum));
+
+// Number.parseInt() - витягує із рядка цілі числа
+console.log(Number.parseInt(strNum)); //23
+console.log(Number.parseInt(fNum1)); //21
+
+let fSize = '20px';
+
+console.log(Number.parseInt(fSize) * 2);
+
+// Number.parseFloat - витягує із рядка цілі та дробові числа
+console.log(Number.parseFloat(fNum1)); //21.23 
+console.log(Number.parseFloat(strNum)); //23
+
+const vNum1 = '22q' * 2;
+
+console.log(vNum1);
+
+console.log(Number.isNaN(vNum1)); //Number.isNaN поверне true тільки у випадку коли вхідне значення NaN
+
+//Додавання чисел з плаваючою точкою
+
+console.log((0.1 + 0.2) === 0.3);
+
+console.log(0.1 + 0.2);
+console.log(((0.1 * 10) + (0.2 * 10)) / 10 === 0.3);
+
+
+// Об'єкт Math
+
+//Math.floor(3.9) - округлює завжди до меншого
+console.log(Math.floor(3.9)); // 3
+
+//Math.ceil(3.1) - Округлює завжди до більшого)
+console.log(Math.ceil(3.1)); // 4
+
+// Math.round(3.5) - округляє по правилах математики
+console.log(Math.round(3.5));
+console.log(Math.round(3.4));
+
+console.log(Math.max(20, 22, 102, 305));
+console.log(Math.min(20, 22, 102, 305));
+
+console.log(Math.pow(25, 2)); //Піднімає до вказаного степеня
+
+console.log(Math.random());
+console.log(Math.ceil(Math.random() * (10 - 1) + 1));
+
+const xr = Math.ceil(Math.random() * (10 - 1) + 1);
+const yr = Math.ceil(Math.random() * (10 - 1) + 1);
+if(xr === yr){
+    console.log('===');
+}
+
+//Рядки
