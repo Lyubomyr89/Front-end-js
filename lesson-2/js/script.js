@@ -1,4 +1,5 @@
 'use strict';
+/*
 
 // Математичні оператори
 // Операції з числами
@@ -116,7 +117,7 @@ const vNum1 = '22q' * 2;
 
 console.log(vNum1);
 
-console.log(Number.isNaN(vNum1)); //Number.isNaN поверне true тільки у випадку коли вхідне значення NaN
+console.log(); //Number.isNaN поверне true тільки у випадку коли вхідне значення NaN
 
 //Додавання чисел з плаваючою точкою
 
@@ -143,7 +144,7 @@ console.log(Math.min(20, 22, 102, 305));
 
 console.log(Math.pow(25, 2)); //Піднімає до вказаного степеня
 
-console.log(Math.random());
+console.log(Math.random()); // Генерує вападкове число в діапазоні від 0 до 1
 console.log(Math.ceil(Math.random() * (10 - 1) + 1));
 
 const xr = Math.ceil(Math.random() * (10 - 1) + 1);
@@ -151,5 +152,53 @@ const yr = Math.ceil(Math.random() * (10 - 1) + 1);
 if(xr === yr){
     console.log('===');
 }
+const xt = 2 * 'sdf'; //NaN
+console.log(Number.isNaN(xt));
+
+*/
 
 //Рядки
+// ``
+const msg = 'Maxim';
+const st = 'student';
+const age = 12;
+const year = 2008;
+let xte = 15 + '15' + 15 + '5';
+const div = '<div class="test"></div>';
+
+console.log(typeof xte);
+console.log('Імя: ' + msg + ', Вік: ' + age + ', рік народження: ' + year); //Конкатинація
+console.log(15 + '15' + 15 + '5');
+
+console.log("I'm");
+console.log('I\\\'m \n"String"');
+
+console.log(`Імя: ${msg}, вік: ${age}, рік народження: ${year}, ${13 + 5 * 6}`); //Інтерполяція
+
+console.log(msg.toLocaleLowerCase());
+console.log(msg.toLocaleUpperCase());
+
+console.log(msg.indexOf('am')); //Повертає -1 якщо нічого не знайшов, або позиція входження підрядка в рядок
+
+const msg2 = 'Hello World...'
+const phone = '+38067854441';
+
+console.log(msg2.includes('Hello')); //true/false 
+console.log(phone.includes('+')); //true/false 
+
+// Якщо true тоді виконати блок 1, в іншому випадку блок 2
+if (phone.includes('+')) {
+    //Блок 1
+    console.log('Обрізати +');
+} else {
+    // Блок 2
+    console.log('Обрізати + не потрібно');
+}
+// ======================================
+if (phone.indexOf('+38') < 0) {
+    console.log('Інша країна');
+    //Блок 1
+} else {
+    console.log('Україна');
+    // Блок 2
+}
