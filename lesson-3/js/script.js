@@ -98,12 +98,16 @@ if (!yourName) {
 } else {
     console.log(`Привіт ${yourName}`);
 }
+// 'test' - true
+// '' - false
 
+// false, 0, NaN, null, undefined, '', "", ``
 
 console.log('-----------------------------------------');
 
 
-const age = prompt('Ведіть свій вік');
+// const age = prompt('Ведіть свій вік');
+const age = 23;
 
 
 /*
@@ -114,35 +118,87 @@ const age = prompt('Ведіть свій вік');
         4. від 24 до 45 - це юний вік
         5. від 45 до 65 - це поважний вік
         6. від 65 до 80 - це пенсіонер
-        6. від 80+ - довгожитель
+        7. від 80+ - довгожитель
 */
 
-if(age){
-    if( (!Number.isNaN(1 * age)) && (age > 0) ){
-        
-        if(age < 6){
+// Якщо умова вірна, тоді блок 1, якщо умова не вірна тоді блок 2, якщо умова блоку 2 вірна  
+
+if (age) {
+    if ((!Number.isNaN(1 * age)) && (age > 0)) {
+
+        if (age < 6) {
             console.log('Маленька дитина');
-        }else if(age >=6 || age < 18){
+        } else if (age >= 6 || age < 18) {
             console.log('Це школяр');
         }
-        else if(age >=18 || age < 24){
+        else if (age >= 18 || age < 24) {
             console.log('Це студент');
         }
-        else if(age >=24 || age < 45){
+        else if (age >= 24 || age < 45) {
             console.log('Ви юний');
         }
-        else if(age >=45 || age < 65){
+        else if (age >= 45 || age < 65) {
             console.log('У Вас поважний вік');
         }
-        else if(age >=65 || age < 80){
+        else if (age >= 65 || age < 80) {
             console.log('Ви пенсіонер');
-        }else{
+        } else {
             console.log('Ви довгожитель');
         }
     }
-    else{
+    else {
         alert('Введіть корректне число!!!');
     }
-}else{
+} else {
     alert('Введіть корректні дані!!!!');
+}
+
+if (true) {
+    // блок 1
+} else {
+    // блок 2
+}
+
+
+if (true) console.log('if true');
+else console.log('Блок else');
+
+// {умова} ? {якщо true блок 1} : {якщо false блок 2} 
+
+// const age2 = (prompt('Ведіть свій вік') >= 18) ? 'Повнолітній' : 'Не повнолітній';
+const age2 = 25 >= 18 ? 'Повнолітній' : 'Не повнолітній';
+
+console.log(age2);
+
+// SWITCH
+
+let cost; //Ціна підписки
+
+let subs =  prompt('Ведіть назву підписки => "free, pro, premium"');
+subs =  subs ? subs.toLowerCase() : false;
+
+// const subs = 'free';
+// -, +, /, *, %
+
+switch (subs) {
+    case 'free':
+        cost = 0;
+        console.log('Ціна підписки = ' + cost);
+        break;
+        
+
+    case 'pro':
+        cost = 500;
+        console.log('Ціна підписки = ' + cost);
+        break;
+        
+
+    case 'premium':
+        cost = 5000;
+        console.log('Ціна підписки = ' + cost);
+        break;
+        
+
+    default:
+        console.log('Ваша підписка не дійсна...');   
 }
