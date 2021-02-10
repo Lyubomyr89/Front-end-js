@@ -88,4 +88,66 @@ console.log(arrStr.join(''));
 console.log(arrStr.join(' '));
 console.log(arrStr.join(' -> '));
 
-// indexOF(), includes()
+
+
+const emails = ['test-10', 2, true, ['test1', 68, false]]; 
+
+emails[1] = 10;
+
+console.log(emails[3][0]);
+
+let strTest = 'lorem nrsr nytd';
+
+console.log(strTest.split(' '));
+
+strTest = strTest.split(' '); // string -> array
+strTest = strTest.join(' '); // array -> string
+
+console.log(strTest);
+
+// indexOF()
+console.log('Позиція знайденого елемента = ' + emails.indexOf(true)); // Повертає позицію елемента якщо він є у масиві, в іншому вападку -1
+
+// includes()
+console.log(cars.includes('BMW')); //true
+console.log(cars.includes('BMW2')); //false
+
+
+// Методи push(), pop(), shift(), unshift()
+
+const users = ['Admin', 'Student', 'Alex', 'Denis', 'Yan'];
+// push()
+const leng = users.push('Max'); //Повертає значення довжини масиву
+console.log(leng);
+console.log(users);
+
+// pop()
+const lastEl = users.pop(); //Повертає значення видаленого елемента
+console.log(lastEl);
+console.log(users);
+
+// unshift()
+users.unshift('sUser' ,'SuperUser'); //Повертає значення довжини масиву
+console.log(users);
+
+// shift()
+users.shift(); //Повертає значення видаленого елемента
+
+console.log(users);
+
+
+// ["sUser-0", "SuperUser-1", "Admin-2", "Student-3", "dghfsk-4"]
+
+
+// Метод slice(початок, кінець)
+const subUsers = users.slice(0, 2); //З 0 до вказаного елемента...
+
+console.log("Підмасив -> ", subUsers);
+
+// Метод splice(позиція, кількість)
+
+users.splice(1, 1); // Видаляє елементи масиву із вказаної позиції...
+console.log(users);
+
+users.splice(3, 0, 'Admin-2'); //
+console.log(5 % 10);
