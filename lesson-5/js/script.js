@@ -139,15 +139,84 @@ console.log(users);
 // ["sUser-0", "SuperUser-1", "Admin-2", "Student-3", "dghfsk-4"]
 
 
+
 // Метод slice(початок, кінець)
 const subUsers = users.slice(0, 2); //З 0 до вказаного елемента...
 
 console.log("Підмасив -> ", subUsers);
+
+
+
+
 
 // Метод splice(позиція, кількість)
 
 users.splice(1, 1); // Видаляє елементи масиву із вказаної позиції...
 console.log(users);
 
-users.splice(3, 0, 'Admin-2'); //
-console.log(5 % 10);
+users.splice(3, 0, 'Admin-2', "test"); // Додавання елементів масиву із вказаної позиції...
+console.log(users);
+
+const list = document.querySelectorAll('ul');
+
+console.log(list);
+
+// arrName.push();
+// arrName.pop();
+
+// arrName.shift();
+// arrName.unshift();
+
+// arrName.slice(0, 9);
+
+// arrName.splice(3, 3);
+
+
+users.splice(0, 2, 'Admin-2', "test"); // Заміна елементів масиву із вказаної позиції...
+console.log(users);
+
+const carsFullNew = [
+    [
+        'Mazda', 2015, 'red', true
+    ],
+    [
+        'Tesla', 2012, 'gray', false
+    ],
+    [
+        'Audi', 2010, 'green', true
+    ]
+];
+
+const carsList = carsFull.concat(carsFullNew);
+
+console.log(carsList);
+
+// Цикли для роботи з масивами for(let i = 0; i < 100; i++){} / for(const user of users){}
+
+
+// Присвоєння за посиланням і за значенням
+
+// Присвоєння за значенням
+let t = 10;
+let z = t;
+
+console.log(t, z);
+
+t = 20;
+
+console.log('t = ', t);
+console.log('z = ', z);
+
+
+// Присвоєння за посиланням.
+const name = ['Alex'];
+const name2 = name;
+console.log('name2', name2);
+
+name[0] = 'Max';
+name2[1] = 'test';
+
+name[1] = 2;
+
+console.log('name', name);
+console.log('name2', name2);
