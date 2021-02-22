@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.form-box {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 100vh;
+  background: url(../img/bg.jpg) no-repeat center;
+}
+
+.user-reg {
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 0 20px 4px #ffffffc2;
+  border-radius: 18px;
+}
+
+.field-box {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.field-box.error{
+    z-index: 10;
+}
+
+.error-msg{
+    background-color: white;
+    padding: 5px;
+    /* margin-bottom: 9px; */
+    color: red;
+    font-size: 14px;
+    /* transform: scale(0); */
+    /* opacity: 0; */
+    transition: all .2s ease-in;
+}
+
+/* .error input:focus + .error-msg,
+.error:hover .error-msg{
+    transform: scale(1);
+    opacity: 1;
+} */
+.error input{
+    background: url(../img/warning.svg) no-repeat calc(100% - 10px) center;
+    background-size: 25px;
+}
+
+/* .error-msg::before{
+    content: '';
+    position: absolute;
+    left: 18%;
+    top: calc(100% - 5px);
+    background-color: inherit;
+    display: block;
+    height: 11px;
+    width: 11px;
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+    transform: rotate(-135deg);
+} */
+
+.complete input{
+    background: url(../img/checked.svg) no-repeat calc(100% - 10px) center;
+    background-size: 25px;
+}
+
+.field-box input {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 30px 10px 10px;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.2s linear all;
+}
+
+.field-box input:focus,
+.field-box input:hover {
+  border: 1px solid rgb(17, 127, 201);
+}
+
+.btn-box {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px;
+  transition: all 0.2s linear;
+  color: white;
+}
+
+.submit {
+  background: rgb(17, 127, 201);
+  border: 2px solid rgb(17, 127, 201);
+}
+
+.submit:focus,
+.submit:hover {
+  background: rgb(4, 49, 80);
+}
+
+.reset {
+  background: rgb(208, 73, 73);
+  border: 2px solid rgb(208, 73, 73);
+}
+
+.reset:focus,
+.reset:hover {
+  background: rgb(148, 9, 9);
+}
+
+.radio input,
+.checkbox input {
+  width: initial;
+  margin-right: 5px;
+}
+
+.radio,
+.checkbox {
+    display: flex;
+}
+.radio label{
+    margin-right: 20px;
+}
+.radio label,
+.checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.policy input{
+    align-self: flex-start;
+}

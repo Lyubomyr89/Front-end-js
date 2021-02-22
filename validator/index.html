@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Валідатор полів форми</title>
+  </head>
+  <body>
+    <section class="form-box">
+      <form class="user-reg">
+        <div class="field-box">
+          <input
+            type="text"
+            class="field-box__item"
+            data-rules="required"
+            data-min="2"
+            data-max="30"
+            maxlength="30"
+            placeholder="Ім'я"
+            name="firsName"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box">
+          <input
+            type="text"
+            class="field-box__item"
+            data-rules="required"
+            data-min="2"
+            data-max="45"
+            maxlength="45"
+            placeholder="Прізвище"
+            name="lastName"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box">
+          <input
+            type="text"
+            class="field-box__item"
+            placeholder="Логін '@user'"
+            name="login"
+            maxlength="20"
+            data-type="login"
+            data-min="3"
+            data-max="20"
+            data-rules="required"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box">
+          <input
+            data-type="number"
+            data-min="1"
+            class="field-box__item"
+            placeholder="Вік"
+            name="age"
+            data-rules="required"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box">
+          <input
+            type="tel"
+            class="field-box__item"
+            data-rules="required"
+            data-min="12"
+            data-max="13"
+            placeholder="+380993357122"
+            name="phone"
+            data-type="tel"
+            maxlength="13"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box">
+          <input
+            data-type="email"
+            class="field-box__item"
+            data-rules="required"
+            placeholder="Email"
+            name="email"
+          />
+          <p class="error-msg"></p>
+        </div>
+        <div class="field-box checkbox policy">
+          <label>
+            <input type="checkbox" name="policy" checked />
+            <span class="check-text"
+              >Я даю згоду на обробку персональних даних, згідно з
+              <a href="#" target="_blank">політикою конфіденційності</a>
+            </span>
+          </label>
+        </div>
+        <div class="btn-box">
+          <button class="btn submit" type="submit">Відправити дані</button>
+          <button class="btn reset" type="reset">Очистити дані</button>
+        </div>
+      </form>
+      <form>
+          <input type="hidden">
+      </form>
+      <form>
+        <input type="hidden">
+    </form>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
