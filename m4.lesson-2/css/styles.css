@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+.counter-box{
+    margin: 20px  auto;
+}
+
+.counter-box button{
+    display: inline-block;
+    min-width: 100px;
+    min-height: 40px;
+    margin-right: 20px;
+    background-color: crimson;
+    border: 2px solid gray;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.counter-box button:hover{
+    background-color: rgb(139, 10, 36);
+}
+
+.counter-box  div{
+    margin-bottom: 20px;
+}
